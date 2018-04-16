@@ -82,7 +82,7 @@ public class Lancamento implements Serializable{
 		this.dataCriacao = dataCriacao;
 	}
 
-	@Column (name = "data_criacao", nullable=false)
+	@Column (name = "data_atualizacao", nullable=false)
 	public Date getDataAtualizacao() {
 		return dataAtualizacao;
 	}
@@ -92,7 +92,7 @@ public class Lancamento implements Serializable{
 	}
 
 	@Enumerated (EnumType.STRING)
-	@Column (name = "data_criacao", nullable=false)
+	@Column (name = "tipo", nullable=false)
 	public TipoEnum getTipo() {
 		return tipo;
 	}
@@ -119,6 +119,8 @@ public class Lancamento implements Serializable{
 				.append(", funcionario=").append(funcionario).append("]");
 		return builder.toString();
 	}
+
+
 	
 
 	
