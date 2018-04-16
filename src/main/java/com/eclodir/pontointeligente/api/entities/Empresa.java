@@ -28,7 +28,7 @@ public class Empresa implements Serializable {
 	private Date dataAtualizacao;
 	private List<Funcionario> funcionarios;
 	
-	private Empresa() {}
+	public Empresa() {}
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)

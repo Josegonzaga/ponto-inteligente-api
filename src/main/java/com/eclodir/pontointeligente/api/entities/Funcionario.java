@@ -31,7 +31,7 @@ public class Funcionario implements Serializable {
 
 	private Long id;
 	private String nome;
-	private String emaill;
+	private String email;
 	private String senha;
 	private String cpf;
 	private BigDecimal valorHora;
@@ -64,23 +64,23 @@ public class Funcionario implements Serializable {
 		this.nome = nome;
 	}
 
-	@Column (name = "email", nullable=false)
-	public String getEmaill() {
-		return emaill;
-	}
-
-	public void setEmaill(String emaill) {
-		this.emaill = emaill;
-	}
-
 	@Column (name = "senha", nullable=false)
-	public String getSenhal() {
+	public String getSenha() {
 		return senha;
 	}
 
-	public void setSenhal(String senha) {
+	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	@Column(name = "email", nullable = false)
+	public String getEmail() {
+		return email;
+	}	
 
 	@Column (name = "cpf", nullable=false)
 	public String getCpf() {
@@ -188,7 +188,7 @@ public class Funcionario implements Serializable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Funcionario [id=").append(id).append(", nome=").append(nome).append(", emaill=").append(emaill)
+		builder.append("Funcionario [id=").append(id).append(", nome=").append(nome).append(", email=").append(email)
 				.append(", senha=").append(senha).append(", cpf=").append(cpf).append(", valorHora=").append(valorHora)
 				.append(", qtdHorasTrabalhoDia=").append(qtdHorasTrabalhoDia).append(", qtdHorasAlmoco=")
 				.append(qtdHorasAlmoco).append(", perfil=").append(perfil).append(", dataCriacao=").append(dataCriacao)
