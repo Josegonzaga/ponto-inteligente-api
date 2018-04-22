@@ -119,6 +119,11 @@ public class Funcionario implements Serializable {
 	public Optional<Float> getQtdHorasTrabalhoDiaOpt(){
 		return Optional.ofNullable(qtdHorasTrabalhoDia);
 	}
+	
+	@Transient
+	public Optional<Float> getQtdHorasAlmocoOpt(){
+		return Optional.ofNullable(qtdHorasAlmoco);
+	}
 
 	@Column (name = "qtd_horas_trabalho", nullable=true)
 	public Float getQtdHorasAlmoco() {
